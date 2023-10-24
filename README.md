@@ -1,5 +1,5 @@
 <div align="center">
-<h1><strong> PEPE Sushi </strong></h1>
+<h1><strong> Web3 Kickstarter project (metamask connection)F </strong></h1>
 <br></br>
 </div>
 
