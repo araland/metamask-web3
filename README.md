@@ -1,5 +1,5 @@
 <div align="center">
-<h1><strong> Web3 Kickstarter project (metamask connection)F </strong></h1>
+<h1><strong> Web3 Kickstarter project (metamask connection) </strong></h1>
 <br></br>
 </div>
 
@@ -10,17 +10,7 @@
 
 ## Description
 
-PEPEblack and gold are twin brother born in a Bitcoin home.
-A member of the PEPE family, Black and Gold's mother went missing with a young man.
-His father, PEPE, raised these two well.
-However, it seems that the father does not know for sure which one was born first...
-The brother are always arguing over which is the older brother.
-So, I want to decide who is stronger!
-Whoever wins the game is the Older Brother!
-The Supreme Siblings Token Battle Royale breaks out!
-
-Older Brother is Black and works as a police officer
-Younger brother is Gold and his occupation is gang boss.
+Wallet connect web3 kickstarter project
 
 ## Built With
 
