@@ -1,0 +1,35 @@
+.page-content {
+  .counter-section {
+    padding: 140px 0px;
+    @media (max-width: 767px) {
+      padding: 120px 0px 50px 0px;
+    }
+    .container {
+      text-align: center;
+      .current-counter {
+        font-size: 36px;
+        font-weight: 600;
+      }
+      .increment-btn {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 22px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  display: inline-block;
+  color: #fff;
+  background: #009140;
+  border: 1px solid #009140;
+  transition: 0.3s;
+  cursor: pointer;
+}

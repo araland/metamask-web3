@@ -1,12 +1,9 @@
 import banner_img from "../../assets/images/banner-img.webp";
-
-declare module "react" {
-  interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
-    fetchpriority?: "high" | "low" | "auto";
-  }
-}
+import { useNavigate } from "react-router-dom";
 
 function HomeBannerSection() {
+  const navigate = useNavigate();
+
   return (
     <div className="home-banner-section darkblue banner-pattern">
       <div className="container">
@@ -20,14 +17,14 @@ function HomeBannerSection() {
               <a className="btn" target="_blank">
                 Learn more
               </a>
-              <a className="btn second" target="_blank">
-                Wallet
+              <a className="btn second" onClick={() => navigate("/counter")}>
+                Counter
               </a>
             </div>
           </div>
           <div className="col-lg-6 col-md-6 position-u wow fadeInRight animated">
             <div className="banner-img">
-              <img src={banner_img} fetchpriority="high" alt="banner" />
+              <img src={banner_img} alt="banner" />
             </div>
           </div>
         </div>

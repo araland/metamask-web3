@@ -4,6 +4,7 @@ import { Buffer } from "buffer";
 import { Layout } from "antd";
 
 import HeaderMenu from "./components/layout/HeaderMenu";
+import FooterMenu from "./components/layout/FooterMenu";
 
 import routes from "./router";
 
@@ -27,6 +28,7 @@ function App() {
     <Layout style={styles.layout}>
       <HeaderMenu />
       {content}
+      <FooterMenu />
     </Layout>
   );
 }

@@ -1,21 +1,24 @@
 import { Contract } from "ethers";
+import { useWeb3React } from "@web3-react/core";
 import { getTokenContractObjByName } from "../utils";
-import { utils } from "ethers";
 
 export function useLoadContract() {
-  async function fetchTokenSupply() {
-    const pepesTokenContract: Contract | null = getTokenContractObjByName("PEPESToken", undefined);
+  const { chainId } = useWeb3React();
+
+  async function fetchCurrentCount() {
+    const counterContract: Contract | null = getTokenContractObjByName("Counter", chainId);
     let result: any;
     try {
-      if (pepesTokenContract) result = utils.formatEther(await pepesTokenContract.totalSupply());
+      if (counterContract) {
+        result = await counterContract.getCount();
+        return result;
+      }
     } catch (err) {
       console.error(err);
     }
-
-    return result;
   }
 
   return {
-    fetchTokenSupply
+    fetchCurrentCount
   };
 }

@@ -1,5 +1,4 @@
 import HomeBannerSection from "./HomeBannerSection";
-import FooterMenu from "../../components/layout/FooterMenu";
 
 import "./Home.scss";
 
@@ -9,7 +8,6 @@ function Home() {
       <div className="home page-content">
         <HomeBannerSection />
       </div>
-      <FooterMenu />
     </>
   );
 }

@@ -13,11 +13,16 @@ const Loader = (Component: any) => (props: any) =>
 
 // Pages
 const Home = Loader(lazy(() => import("./pages/home")));
+const Counter = Loader(lazy(() => import("./pages/counter")));
 
 const routes: RouteObject[] = [
   {
     path: "/",
     element: <Home />
+  },
+  {
+    path: "/counter",
+    element: <Counter />
   },
   {
     path: "home",

@@ -3,6 +3,7 @@ import { Contract } from "@ethersproject/contracts";
 import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 
+import CounterABI from "../abi/Counter.json";
 import ERC20ABI from "../abi/ERC20.json";
 
 export const Networks = {
@@ -20,15 +21,15 @@ export const CONTRACTS_BY_NETWORK: {
   [key: number]: { [key: string]: ContractInfo };
 } = {
   [Networks.MainNet || Networks.Ethereum]: {
-    PEPESToken: {
-      address: "",
-      abi: ERC20ABI
+    Counter: {
+      address: "0x950bC0B2820e7182E3dAF45090a959A156ff3308",
+      abi: CounterABI.abi
     }
   },
   [Networks.Testnet]: {
-    PEPESToken: {
-      address: "",
-      abi: ERC20ABI
+    Counter: {
+      address: "0x950bC0B2820e7182E3dAF45090a959A156ff3308",
+      abi: CounterABI.abi
     }
   }
 };
@@ -43,7 +44,7 @@ export const simpleMainProvider: Provider = new ethers.providers.JsonRpcBatchPro
 );
 
 export function getContractInfo(name: string, chainId: number | undefined = undefined) {
-  if (!chainId) chainId = 56;
+  if (!chainId) chainId = currentNetwork;
   const contracts = CONTRACTS_BY_NETWORK?.[chainId];
   if (contracts) {
     return contracts?.[name];
