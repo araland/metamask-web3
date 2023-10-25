@@ -2,6 +2,7 @@
   "name": "web3-kickstarter",
   "version": "1.0.0",
   "author": "Aiden",
+  "repository": "https://github.com/araland/metamask-web3",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
