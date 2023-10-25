@@ -1,6 +1,6 @@
-# Basic Sample Hardhat Project
+# Simple Counter Smart Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This simple counter smart contract was developed by the hardhat framework
 
 Try running some of the following tasks:
 
