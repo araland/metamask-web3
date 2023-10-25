@@ -32,8 +32,10 @@ function Counter() {
   useEffect(() => {
     async function init() {
       if (!account) return;
+      setIsLoading(true);
       const count = await fetchCurrentCount();
       setCurCount(Number(count));
+      setIsLoading(false);
     }
     init();
   }, [account]);
@@ -42,7 +44,7 @@ function Counter() {
     <div className="counter page-content">
       <div className="counter-section">
         <div className="container">
-          <div className="current-counter">{curCount}</div>
+          <div className="current-counter">{isLoading ? "Loading Count" : curCount}</div>
           <div className="btn increment-btn" onClick={increment}>
             {isLoading ? "Loading" : "Increment"}
           </div>
